@@ -43,3 +43,19 @@ small, .text_small {font-size: 0.75rem;}
     max-width: 600px;
     margin: 50px auto;
 }
+
+a:link {
+    color: #2F4F4F;
+}
+
+a:visited {
+    color: #696969;
+}
+
+a:hover {
+    color: #708090;
+}
+
+a:active {
+    color: #D3D3D3;
+} 
