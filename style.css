@@ -90,6 +90,7 @@ dt {
 .dates{
     font-size: 1.333rem;
     display: block;
+    color: #808080;
 }
 
 #coursesUl {
