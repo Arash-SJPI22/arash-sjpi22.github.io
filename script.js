@@ -64,16 +64,6 @@ const kurser = [
 ];
 
 for (let i=0; i < 12; i++) {
-    function courseStatus () {
-        liS1.appendChild(aSS);
-        if ((date >= kurser[i].kursStart) && (date < kurser[i].kursSlut)) {
-            aSS.innerText += " Kursen Pågår";
-        } else if ((date > kurser[i].kursStart) && (date > kurser[i].kursSlut)) {
-            aSS.innerText += " Avslutad Kurs";
-        } else if (date < kurser[i].kursStart) {
-            aSS.innerText += " Kursen Ej Påbörjad";
-        };
-    };
     const courses = document.querySelector("#courses");
     const intro = document.querySelector("#intro");
 
@@ -87,8 +77,10 @@ for (let i=0; i < 12; i++) {
     const dlS1 = document.createElement("dl");
     const dlS2 = document.createElement("dl");
     let j = i + 1;
+    
     intro.appendChild(liS1);
     liS1.appendChild(aS);
+    liS1.appendChild(aSS);
     
     courses.appendChild(liS2);
     liS2.appendChild(h3S);
@@ -110,15 +102,12 @@ for (let i=0; i < 12; i++) {
     };
     h4SP.innerText = "Egna Projekt";
     h4SI.innerText = "Inlämningsuppgifter";
-    courseStatus();
-}
 
-{/* <h3 id="kurs02">02 Webbutveckling - HTML & CSS</h3>
-        <h4 class="egnaProjekt"></h4>
-        <dl>
-        
-        </dl>
-        <h4 class="inlamning"></h4>
-        <dl>
-
-        </dl> */}
+    if ((date >= kurser[i].kursStart) && (date < kurser[i].kursSlut)) {
+        aSS.innerText += " Kursen Pågår";
+    } else if ((date > kurser[i].kursStart) && (date > kurser[i].kursSlut)) {
+        aSS.innerText += " Avslutad Kurs";
+    } else if (date < kurser[i].kursStart) {
+        aSS.innerText += " Kursen Ej Påbörjad";
+    };
+};
