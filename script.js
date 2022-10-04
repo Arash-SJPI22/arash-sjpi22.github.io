@@ -37,7 +37,7 @@ const courses = [
             descripton: "En digital CV - HTML/CSS & JS",
             link: "https://arash-sjpi22.github.io/arash-sjpi22/",
             linkDescription: "Inlämningsuppgift 7",
-            link: "https://github.com/Arash-SJPI22/arash-sjpi22",
+            link2: "https://github.com/Arash-SJPI22/arash-sjpi22",
         },], 
     },
     {
