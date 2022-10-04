@@ -14,8 +14,6 @@ body {
     color: bisque;
 }
 
-
-
 h1, h2, h3, h4, h5 {
     margin: 3rem 0 1.38rem;
     font-family: 'Kalam', cursive;
@@ -28,21 +26,22 @@ h1 {
     font-size: 4.209rem;
 }
 
-h2 {font-size: 3.157rem;}
+h2 {font-size: 3.157rem;
+    padding: 0 0 0 0.5rem;
+}
 
-h3 {font-size: 2.369rem;}
+h3 {font-size: 2.5rem;
+    padding: 0 0 0 1rem;
+}
 
-h4 {font-size: 1.777rem;}
+h4 {font-size: 1.9rem;
+    margin: 0;
+    padding: 0 0 0 2rem;
+}
 
 h5 {font-size: 1.333rem;}
 
 small, .text_small {font-size: 0.75rem;}
-
-
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-}
 
 a:link {
     color: #2F4F4F;
@@ -59,3 +58,17 @@ a:hover {
 a:active {
     color: #D3D3D3;
 } 
+
+dl {
+    padding: 0 4rem;
+}
+
+dt {
+    padding: 0.5rem 0 0 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
