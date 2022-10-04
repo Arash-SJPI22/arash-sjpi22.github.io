@@ -1,0 +1,2 @@
+const inlamning = document.querySelectorAll(".inlamning").forEach(e => e.innerHTML = "Inlämningsuppgifter")
+const egna = document.querySelectorAll(".egnaProjekt").forEach(e => e.innerHTML = "Egna Projekt");
