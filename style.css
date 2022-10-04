@@ -87,6 +87,11 @@ dt {
     color: #6B8E23;
 }
 
+.dates{
+    font-size: 1.333rem;
+    display: block;
+}
+
 #coursesUl {
     padding: 1rem;
 }

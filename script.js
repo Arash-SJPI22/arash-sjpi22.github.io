@@ -97,6 +97,10 @@ const courses = [
     },
 ];
 
+function getCourseDates(t) {
+    return courses[t].courseStart.toDateString() + " - " + courses[t].courseEnd.toDateString();
+}
+
 for (let i=0; i < 12; i++) {
     const coursesUl = document.querySelector("#coursesUl");
     const intro = document.querySelector("#intro");
@@ -106,7 +110,8 @@ for (let i=0; i < 12; i++) {
     const aS2 = document.createElement("a");
     const liS1 = document.createElement("li");
     const liS2 = document.createElement("li");
-    const h3S = document.createElement("h3");
+    const h3S1 = document.createElement("h3");
+    const h3S2 = document.createElement("span");
     const h4SP = document.createElement("h4");
     const h4SI = document.createElement("h4");
     const dlS1 = document.createElement("dl");
@@ -120,7 +125,8 @@ for (let i=0; i < 12; i++) {
     liS1.appendChild(aSS);
     
     coursesUl.appendChild(liS2);
-    liS2.appendChild(h3S);
+    liS2.appendChild(h3S1);
+    liS2.appendChild(h3S2);
     liS2.appendChild(h4SP);
     liS2.appendChild(dlS1);
     liS2.appendChild(h4SI);
@@ -130,14 +136,21 @@ for (let i=0; i < 12; i++) {
         aS1.setAttribute("href", "#kurs0" + j);
         aS1.innerText = "0" + j + " " + courses[i].courseName;
 
-        h3S.setAttribute("id", "kurs0" + j);    
-        h3S.innerText = "0" + j + " " + courses[i].courseName;
+        h3S1.setAttribute("id", "kurs0" + j);    
+        h3S1.innerText = "0" + j + " " + courses[i].courseName;
+        h3S1.appendChild(h3S2);
+        h3S2.setAttribute("class", "dates");
+        h3S2.innerText = getCourseDates(i);
+        
     } else {
         aS1.setAttribute("href", "#kurs" + j);
         aS1.innerText = j + " " + courses[i].courseName;
-
-        h3S.id = "kurs" + j;    
-        h3S.innerText = j + " " + courses[i].courseName;
+        
+        h3S1.id = "kurs" + j;    
+        h3S1.innerText = j + " " + courses[i].courseName;
+        h3S1.appendChild(h3S2);
+        h3S2.setAttribute("class", "dates");
+        h3S2.innerText = getCourseDates(i);
     };
 
     h4SP.innerText = "Egna Projekt";
