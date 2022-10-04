@@ -72,7 +72,7 @@ dt {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 640px;
     margin: 50px auto;
 }
 
@@ -86,3 +86,6 @@ dt {
     color: #6B8E23;
 }
 
+#coursesUl {
+    padding: 1rem;
+}
