@@ -76,3 +76,13 @@ dt {
     margin: 50px auto;
 }
 
+.courseNotStarted {
+    color: #D2691E;
+}
+.courseOnGoing {
+    color: #A52A2A;
+}
+.courseFinished {
+    color: #6B8E23;
+}
+

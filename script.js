@@ -77,7 +77,7 @@ for (let i=0; i < 12; i++) {
     const dlS1 = document.createElement("dl");
     const dlS2 = document.createElement("dl");
     let j = i + 1;
-    
+
     intro.appendChild(liS1);
     liS1.appendChild(aS);
     liS1.appendChild(aSS);
@@ -88,9 +88,11 @@ for (let i=0; i < 12; i++) {
     liS2.appendChild(dlS1);
     liS2.appendChild(h4SI);
     liS2.appendChild(dlS2);
+
     if (i + 1 < 10) {
         aS.setAttribute("href", "#kurs0" + j);
         aS.innerText = "0" + j + " " + kurser[i].kursNamn;
+
         h3S.setAttribute("id", "kurs0" + j);    
         h3S.innerText = "0" + j + " " + kurser[i].kursNamn;
     } else {
@@ -100,14 +102,18 @@ for (let i=0; i < 12; i++) {
         h3S.id = "kurs" + j;    
         h3S.innerText = j + " " + kurser[i].kursNamn;
     };
+
     h4SP.innerText = "Egna Projekt";
     h4SI.innerText = "Inlämningsuppgifter";
 
     if ((date >= kurser[i].kursStart) && (date < kurser[i].kursSlut)) {
         aSS.innerText += " Kursen Pågår";
+        liS1.setAttribute("class", "courseOnGoing");
     } else if ((date > kurser[i].kursStart) && (date > kurser[i].kursSlut)) {
         aSS.innerText += " Avslutad Kurs";
+        liS1.setAttribute("class", "courseFinished");
     } else if (date < kurser[i].kursStart) {
         aSS.innerText += " Kursen Ej Påbörjad";
+        liS1.setAttribute("class", "courseNotStarted");
     };
 };
