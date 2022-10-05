@@ -157,13 +157,13 @@ for (let i=0; i < 12; i++) {
     h4SI.innerText = "Inlämningsuppgifter";
 
     if ((date >= courses[i].courseStart) && (date < courses[i].courseEnd)) {
-        aSS.innerText += " Kursen Pågår";
+        aSS.innerText += " Pågår";
         liS1.setAttribute("class", "courseOnGoing");
     } else if ((date > courses[i].courseStart) && (date > courses[i].courseEnd)) {
-        aSS.innerText += " Avslutad Kurs";
+        aSS.innerText += " Avslutad";
         liS1.setAttribute("class", "courseFinished");
     } else if (date < courses[i].courseStart) {
-        aSS.innerText += " Kursen Ej Påbörjad";
+        aSS.innerText += " Ej Påbörjad";
         liS1.setAttribute("class", "courseNotStarted");
     };
     
