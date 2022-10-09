@@ -33,12 +33,13 @@ const courses = [
             linkDescription: "Inlämningsuppgift 4",
             link2: "https://github.com/Arash-SJPI22/todo",
         },
-        {
+/*        {
             descripton: "En digital CV - HTML/CSS & JS",
             link: "https://arash-sjpi22.github.io/arash-sjpi22/",
             linkDescription: "Inlämningsuppgift 7",
             link2: "https://github.com/Arash-SJPI22/arash-sjpi22",
-        },], 
+        },*/
+    ], 
     },
     {
         courseName: "Webbutveckling - HTML & CSS",
